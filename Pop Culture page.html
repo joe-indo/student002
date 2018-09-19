@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <title>Pop Culture Page</title>
+
+    <script type="text/javascript">
+	var counter = localStorage.getItem("Points");
+    localStorage.getItem("popq");
+
+        function question1() {
+            var answer = prompt("Which famous actor made his debut as James Bond in 2006's Casino Royale?");
+            if (answer == "Daniel Craig") {
+			counter++;
+                alert("That is correct +1 point");
+            } else if (answer == "daniel craig") {
+			counter++;
+                alert("That is correct +1 point");
+            } else {
+                alert("That is inncorrect +O  points");
+
+            }
+        }
+
+
+
+        function wrongbutton1() {
+            alert("That is inncorect +0 points");
+        }
+
+        function correctbutton1() {
+		counter++;
+            alert("That is correct +1 points");
+        }
+
+        function wrongbutton2() {
+            alert("That is inncorect +0 points");
+        }
+    </script>
+
+    <center><button onclick="myFunction()">Next Question</button></center>
+
+</head>
+
+<body background="Pop.jpg">
+
+
+    <div id="question2">
+
+        <center><p>Which famous actor won the Oscar for Best Actor in 2016?</p></center>
+
+
+        <br>
+        <center><button onclick="wrongbutton1()">Jared Leto</button></center>
+
+        <br>
+        <center><button onclick="correctbutton1()">Leonardo DiCaprio</button></center>
+        <br>
+        <center><button onclick="wrongbutton2()">Meryl Streep</button></center>
+
+
+
+    </div>
+
+    <div id="question3">
+<center>
+        
+            <form>
+                <p><b>Which famous singer's real name is Stefani Joanne Angelina Germanotta?</b><input type="TEXT" size="10" name="blue"></p>
+
+                <p><input type="BUTTON" value="Answer" onClick="textBoxQuestion(blue.value);"> </p>
+            </form>
+        
+</center>
+    </div>
+
+     <div id="question4">
+
+        <center>What year was it that the Academy "Oscars" Awards were first presented?</center>
+
+
+        <br>
+        <center><button onclick="wrongbutton1()">1982</button></center>
+
+        <br>
+        <center><button onclick="wrongbutton2()">1937</button></center>
+        <br>
+        <center><button onclick="correctbutton1()">1929</button></center>
+
+
+
+    </div>
+
+     <div id="question5">
+<center>
+        
+            <form>
+                <p><b>Which famous actor plays the powerful mafia lord Don Corleone in 1972's The Godfather?</b><input type="TEXT" size="10" name="red"></p>
+
+                <p><input type="BUTTON" value="Answer" onClick="textBoxQuestion2(red.value);"> </p>
+				 <center><a href="Selection menu.html">You are done! Click here to continue!</a></center>
+
+            </form>
+        
+</center>
+     </div>
+  
+
+        <script>
+            function textBoxQuestion(blue) {
+                if (blue == "Lady Gaga") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else if (blue == "lady gaga") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else {
+                    alert("That is Inncorrect +O  points");
+                }
+            }
+
+            function textBoxQuestion2(red) { 
+                if (red == "Marlon Brando") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else if (red == "marlon brando") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else {
+                    alert("That is Inncorrect +O  points");
+                }
+				localStorage.setItem("Points",counter);
+            }
+
+
+            function myFunction() {
+
+                var x = document.getElementById("question" + currentQuestion);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            currentQuestion++;
+            }
+
+           var currentQuestion = 2;
+            var x = document.getElementById("question2");
+            x.style.display = "none";
+            var x = document.getElementById("question3");
+            x.style.display = "none";
+            var x = document.getElementById("question4");
+            x.style.display = "none";
+            var x = document.getElementById("question5");
+            x.style.display = "none";
+            question1();
+			          
+		    localStorage.setItem("popq","true");
+
+        </script>
+</body>
+
+</html>
+

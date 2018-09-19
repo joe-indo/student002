@@ -1,0 +1,163 @@
+<html>
+
+<head>
+    <title> History Page</title>
+
+    <script type="text/javascript">
+       var counter = localStorage.getItem("Points");
+	   localStorage.getItem("historyq");
+
+        function question1() {
+            var answer = prompt("When was the war of 1812");
+            if (answer == 1812) {
+			counter++;
+                alert("That is correct +1 point");
+            } else {
+                alert("That is Inncorrect +O  points");
+
+            }
+        }
+
+
+
+        function wrongbutton1() {
+            alert("That is inncorect +0 points");
+        }
+
+        function correctbutton1() {
+		counter++;
+            alert("That is correct +1 points");
+        }
+
+        function wrongbutton2() {
+            alert("That is inncorect +0 points");
+        }
+    </script>
+
+    <center><button onclick="myFunction()">Next Question</button></center>
+
+</head>
+
+<body background="historyback.jpg">
+
+
+    <div id="question2">
+
+        <center>When was John A macdonald born ?</center>
+
+
+        <br>
+        <center><button onclick="wrongbutton1()">2018</button></center>
+
+        <br>
+        <center><button onclick="correctbutton1()">1815</button></center>
+        <br>
+        <center><button onclick="wrongbutton2()">1928</button></center>
+
+
+
+    </div>
+
+    <div id="question3">
+
+     <center>
+            <form>
+                <p><b>When did Canada become a country?</b><input type="TEXT" size="10" name="blue"></p>
+
+                <p><input type="BUTTON" value="Answer" onClick="textBoxQuestion(blue.value);"> </p>
+            </form>
+       
+</center>
+    </div>
+
+ <div id="question4">
+<center>
+    
+            <form>
+                <p><b>When year did WWII end?</b><input type="TEXT" size="10" name="red"></p>
+
+                <p><input type="BUTTON" value="Answer" onClick="textBoxQuestion2(red.value);"> </p>
+            </form>
+  </center>
+
+    </div> 
+  <div id="question5">
+<center>
+     
+            <form>
+                <p><b>Which Empire colonized Canada</b><input type="TEXT" size="10" name="pink"></p>
+
+                <p><input type="BUTTON" value="Answer" onClick="textBoxQuestion3(pink.value);"> </p>
+								 <center><a href="Selection menu.html">You are done! Click here to continue!</a></center>
+
+            </form>
+
+</center>
+    </div>   
+
+        <script>
+            function textBoxQuestion(blue) {
+                blue = Number(blue);
+                if (blue == 1867) {
+				counter++;
+                    alert("That is correct +1 point");
+                } else {
+                    alert("That is Inncorrect +O  points");
+                }
+            }
+
+
+            function textBoxQuestion2(red) {
+                red = Number(red);
+                if (red == 1945) {
+				counter++;
+                    alert("That is correct +1 point");
+                } else {
+                    alert("That is Inncorrect +O  points");
+                }
+            }
+
+            
+            function textBoxQuestion3(pink) {
+   
+                if (pink == "British"|| pink == "British Empire") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else {
+                    alert("That is Inncorrect +O  points");
+                }
+				
+				localStorage.setItem("Points",counter);
+            }
+
+
+            function myFunction() {
+
+                var x = document.getElementById("question" + currentQuestion);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            currentQuestion++;
+            }
+
+var currentQuestion = 2;
+            var x = document.getElementById("question2");
+            x.style.display = "none";
+            var x = document.getElementById("question3");
+            x.style.display = "none";
+            var x = document.getElementById("question4");
+            x.style.display = "none";
+            var x = document.getElementById("question5");
+            x.style.display = "none";
+            question1();
+			
+			
+			localStorage.setItem("historyq","true");
+        </script>
+</body>
+
+</html>
+
+

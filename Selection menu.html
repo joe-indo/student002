@@ -1,0 +1,70 @@
+<html>
+
+	<head>
+		<title> Selection Menu	</title>
+	
+<script>
+
+var counter = localStorage.getItem("Points")
+
+var historyOne = localStorage.getItem("historyq")
+
+var popTwo = localStorage.getItem("popq")
+
+var sportThree = localStorage.getItem("sportsq")
+
+
+</script>
+</head>
+<body background="orange.jpg">
+<center>
+<h1>SELECTION MENU CENTER</h1>
+<p id="pointss"> </p>
+
+<p>Please select the topic you wish to take the trivia quiz for</p>
+
+<div id="historylink"> 
+<p>
+<a  href="history page.html">History</a>
+</p>
+</div>
+ 
+<div id="poplink"> 
+<p>
+<a  href="Pop Culture page.html">Pop Culture and Entertainment</a>
+</p>
+</div>
+
+<div id="sportslink">
+<p>
+<a  href="Sports page.html">Sports</a>
+</p>
+</div>
+
+
+
+</center>
+
+
+<script>
+document.getElementById("pointss").innerHTML = "You now have " + counter + " points out of 15!";
+
+if(historyOne == "true") {
+document.getElementById("historylink").style.visibility = 'hidden';
+}
+
+if(popTwo == "true") {
+document.getElementById("poplink").style.visibility = 'hidden';
+}
+
+if(sportThree == "true") {
+document.getElementById("sportslink").style.visibility = 'hidden';
+}
+
+
+localStorage.setItem("Points",counter);
+</script>
+
+</body>
+
+</html>

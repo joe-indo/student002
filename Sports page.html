@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>Sports Page</title>
+
+    <script type="text/javascript">
+	var counter = localStorage.getItem("Points");
+    localStorage.getItem("sportsq");
+
+        function question1() {
+            var answer = prompt("How many NBA Champoinships did Michael Jordan win with the Chicago Bulls?");
+            if (answer == "Six") {
+			counter++;
+                alert("That is correct +1 point");
+            } else if (answer == "six") {
+		    counter++;
+                alert("That is correct +1 point");
+			} else if (answer == 6) {
+			counter++;
+                alert("That is correct +1 point");
+            } else {
+                alert("That is inncorrect +O  points");
+
+            }
+        }
+
+
+
+        function wrongbutton1() {
+            alert("That is inncorect +0 points");
+        }
+
+        function correctbutton1() {
+	    counter++;
+            alert("That is correct +1 points");
+        }
+
+        function wrongbutton2() {
+            alert("That is inncorect +0 points");
+        }
+    </script>
+
+    <center><button onclick="myFunction()">Next Question</button></center>
+
+</head>
+
+ <body background="https://png.pngtree.com/thumb_back/fw800/back_pic/03/98/54/7357f4e0569d327.jpg">
+
+
+    <div id="question2">
+
+        <center>Which NFL team lost four consecutive Super Bowls from 1991-1994?</center>
+
+
+        <br>
+        <center><button onclick="correctbutton1()">Buffalo Bills</button></center>
+
+        <br>
+        <center><button onclick="wrongbutton1()">Green Bay Packers</button></center>
+        <br>
+        <center><button onclick="wrongbutton2()">Miami Dolphins</button></center>
+
+
+
+    </div>
+
+    <div id="question3">
+<center>
+       
+            <form>
+                <p><b>The classic 1980 movie Raging Bull is about which real life boxer?</b><input type="TEXT" size="10" name="blue"></p>
+
+                <p><input type="BUTTON" value="Answer" onClick="textBoxQuestion(blue.value);"> </p>
+            </form>
+        
+</center>
+    </div>
+
+     <div id="question4">
+
+        <center>Which professional boxer gave Muhammad Ali his first defeat?</center>
+
+
+        <br>
+        <center><button onclick="wrongbutton1()">George Foreman</button></center>
+
+        <br>
+        <center><button onclick="wrongbutton2()">Leon Spinks</button></center>
+        <br>
+        <center><button onclick="correctbutton1()">Joe Frazier</button></center>
+
+
+
+    </div>
+
+     <div id="question5">
+
+        <center>
+            <form>
+                <p><b><cener>What country won the first ever Soccer World Cup in 1930?</b><input type="TEXT" size="10" name="red"></p>
+
+                <p><input type="BUTTON" value="Answer" onClick="textBoxQuestion2(red.value);"> </p>
+								 <center><a href="Selection menu.html">You are done! Click here to continue!</a></center>
+
+            </form>
+       
+</center>
+     </div>
+  
+
+        <script>
+            function textBoxQuestion(blue) {
+                if (blue == "Jake LaMotta") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else if (blue == "jake lamotta") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else {
+                    alert("That is Inncorrect +O  points");
+                }
+            }
+
+            function textBoxQuestion2(red) { 
+                if (red == "Uruguay") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else if (red == "uruguay") {
+				counter++;
+                    alert("That is correct +1 point");
+                } else {
+                    alert("That is Inncorrect +O  points");
+                }
+				localStorage.setItem("Points",counter);
+            }
+
+
+            function myFunction() {
+
+                var x = document.getElementById("question" + currentQuestion);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            currentQuestion++;
+            }
+
+           var currentQuestion = 2;
+            var x = document.getElementById("question2");
+            x.style.display = "none";
+            var x = document.getElementById("question3");
+            x.style.display = "none";
+            var x = document.getElementById("question4");
+            x.style.display = "none";
+            var x = document.getElementById("question5");
+            x.style.display = "none";
+            question1();
+			
+		   localStorage.setItem("sportsq","true");
+        </script>
+</body>
+
+</html>
